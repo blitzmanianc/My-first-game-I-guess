@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://cec7buge12f3w"]
+
+[ext_resource type="PackedScene" uid="uid://ygnsjjx0ttlc" path="res://scenes/slime.tscn" id="1_1604s"]
+[ext_resource type="Texture2D" uid="uid://bu77io1b0r8lk" path="res://assets/sprites/slime_purple.png" id="2_shbks"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irlhj"]
+atlas = ExtResource("2_shbks")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0evse"]
+atlas = ExtResource("2_shbks")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msyve"]
+atlas = ExtResource("2_shbks")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12ukx"]
+atlas = ExtResource("2_shbks")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_82u8i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irlhj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0evse")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msyve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12ukx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="SlimePurple" instance=ExtResource("1_1604s")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_82u8i")
+frame = 0
+frame_progress = 0.0
